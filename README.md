@@ -246,8 +246,13 @@ Contributions are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) and ou
 [Code of Conduct](CODE_OF_CONDUCT.md). Good first areas: real food photography,
 more regional cuisines, translations, accessibility, and on-device model support.
 
+**New to open source? Students especially welcome** 🌱 — start with the gentle,
+jargon-free [**Getting Started guide**](docs/GETTING_STARTED.md): install the tools,
+understand "what is what," and make your first pull request step by step.
+
 Standards-based guides for contributors:
 
+- 🌱 [Getting Started (beginners)](docs/GETTING_STARTED.md) — your first contribution, explained simply.
 - 🎨 [Design Guidelines](docs/DESIGN_GUIDELINES.md) — the visual system, motion, tone.
 - 🧑‍💻 [Engineering Guidelines](docs/ENGINEERING_GUIDELINES.md) — coding standards,
   security must-dos, quality gates, Definition of Done.

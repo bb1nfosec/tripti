@@ -4,6 +4,12 @@ Thank you for helping make Tripti better! This is a calm, local-first project fo
 real households — contributions that keep it warm, honest, and private are very
 welcome.
 
+> 🌱 **Brand new to open source, or a student making a first contribution?** Don't
+> start here — start with the friendly, step-by-step
+> [**Getting Started guide**](docs/GETTING_STARTED.md). It explains the tools and
+> the words (fork, branch, PR…) in plain language. This file is the deeper reference
+> for once you're set up.
+
 ## Ways to help
 
 - 🍲 **Cuisines & recipes** — more regional baselines and sourcing catalogs.
