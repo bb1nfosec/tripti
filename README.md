@@ -8,7 +8,9 @@
 "What shall we cook tonight?" — answered with what's already in your kitchen.
 
 [![CI](https://github.com/bb1nfosec/tripti/actions/workflows/ci.yml/badge.svg)](https://github.com/bb1nfosec/tripti/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/bb1nfosec/tripti/actions/workflows/codeql.yml/badge.svg)](https://github.com/bb1nfosec/tripti/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-5F7D5A.svg)](LICENSE)
+[![Security self-assessment](https://img.shields.io/badge/security-self--assessment-5F7D5A.svg)](docs/SECURITY_AUDIT.md)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-5F7D5A.svg)](CONTRIBUTING.md)
 
 **[Live demo →](https://tripti-eight.vercel.app)** · bring your own free key (or the on-device option)
@@ -219,7 +221,24 @@ Tripti is built by and for security-minded people. Highlights:
   request, stores nothing, logs nothing, is same-origin-only and rate-limited. The
   operator key is read only from server env and is never client-readable.
 
-See [SECURITY.md](SECURITY.md) for the threat model and how to report a vulnerability.
+### Security testing & standards
+
+This project is built to a documented standard and continuously tested:
+
+- 📋 **[Security self-assessment](docs/SECURITY_AUDIT.md)** — threat model, control
+  verification, findings, and residual risks, mapped to **NIST SSDF (SP 800-218)**
+  and **OWASP** (Top 10 2021, ASVS, Secure Coding Practices).
+- 🔎 **SAST** — [CodeQL](.github/workflows/codeql.yml) (`security-and-quality`) on
+  every push/PR + weekly.
+- 🕵️ **Secret scanning** — [gitleaks](.github/workflows/ci.yml) in CI and an optional
+  pre-commit hook.
+- 📦 **Supply chain** — `npm audit` (gates on production-critical),
+  [Dependabot](.github/dependabot.yml), and
+  [dependency review](.github/workflows/dependency-review.yml) on PRs; pinned lockfile.
+- ✅ **Quality gates** — strict `tsc`, `next lint`, and a clean production build.
+
+See [SECURITY.md](SECURITY.md) for the threat model summary, the dependency-advisory
+policy, and how to report a vulnerability.
 
 ## 🤝 Contributing
 
