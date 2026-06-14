@@ -11,6 +11,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-5F7D5A.svg)](LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-5F7D5A.svg)](CONTRIBUTING.md)
 
+**[Live demo →](https://tripti-eight.vercel.app)** · bring your own free key (or the on-device option)
+
+<sub>🔑 The demo ships **no** API key — you supply your own in the app. Never deploy or share an instance with a live key baked in.</sub>
+
 </div>
 
 ---
@@ -172,6 +176,13 @@ vercel --prod
 ```
 
 See [`.env.example`](.env.example) for all operator options.
+
+> 🔑 **Never put a live API key in the repo or the client bundle.** Keys belong in
+> server-side environment variables only (and `.env*` files are git-ignored). A
+> public demo deployed from this repo carries **no** committed key — visitors bring
+> their own, or the operator wires a key via env. Don't share a deployed URL that has
+> a live key baked in, and never paste a key into source, issues, or screenshots.
+> CI runs **gitleaks** to help catch accidental commits.
 
 ## 🧱 Architecture
 
