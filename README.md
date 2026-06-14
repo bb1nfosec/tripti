@@ -243,8 +243,7 @@ This project is built to a documented standard and continuously tested:
 - 🕵️ **Secret scanning** — [gitleaks](.github/workflows/ci.yml) in CI and an optional
   pre-commit hook.
 - 📦 **Supply chain** — `npm audit` (gates on production-critical),
-  [Dependabot](.github/dependabot.yml), and
-  [dependency review](.github/workflows/dependency-review.yml) on PRs; pinned lockfile.
+  [Dependabot](.github/dependabot.yml) auto-PRs, and a committed lockfile.
 - ✅ **Quality gates** — strict `tsc`, `next lint`, and a clean production build.
 
 See [SECURITY.md](SECURITY.md) for the threat model summary, the dependency-advisory

@@ -45,8 +45,7 @@ middleware, build/CI configuration, and dependency posture.
 | Manual secure code review | Maintainer review against OWASP Secure Coding Practices | this document |
 | Static analysis (SAST) | **CodeQL** (`security-and-quality`) | `.github/workflows/codeql.yml` |
 | Secret scanning | **gitleaks** (CI + optional pre-commit) | `.github/workflows/ci.yml`, `.pre-commit-config.yaml` |
-| Dependency vulnerability scan | **npm audit** (gate on prod-critical) + **Dependabot** | `.github/workflows/ci.yml`, `.github/dependabot.yml` |
-| Dependency review on PRs | **actions/dependency-review-action** (fail ≥ high) | `.github/workflows/dependency-review.yml` |
+| Dependency vulnerability scan | **npm audit** (gate on prod-critical) + **Dependabot** (auto-PRs) | `.github/workflows/ci.yml`, `.github/dependabot.yml` |
 | Type safety | `tsc --noEmit` (strict) | `.github/workflows/ci.yml` |
 | Lint | `next lint` (`next/core-web-vitals`) | `.github/workflows/ci.yml` |
 
@@ -106,7 +105,7 @@ model server; security of a device the user does not control.
 | A03 Injection | Prompt-injection (C6) + XSS (C7) + zod validation (C5/C8); no SQL (IndexedDB via Dexie, parameterized). |
 | A04 Insecure Design | Local-first, minimal surface, one-call pipeline, fail-safe (C16); documented threat model. |
 | A05 Security Misconfiguration | Strict CSP + headers (C1/C2); no debug endpoints; env-only operator secret. |
-| A06 Vulnerable Components | npm audit + Dependabot + dependency review + pinned lockfile (C15); see §10. |
+| A06 Vulnerable Components | npm audit + Dependabot + pinned lockfile (C15); see §10. |
 | A07 Auth Failures | No accounts/passwords; nothing to brute-force. |
 | A08 Software & Data Integrity | Lockfile, CI provenance, no remote `<script>`/CDN (C4/C15); SW integrity (C14). |
 | A09 Logging & Monitoring Failures | Deliberately no PII/secret logging (C9/C13); proxy logs nothing (privacy-by-design trade-off, documented). |
