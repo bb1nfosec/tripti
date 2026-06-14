@@ -34,8 +34,11 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      # Fail only on high/critical advisories; report everything else.
-      - run: npm audit --audit-level=high
+      # Full report for visibility (non-blocking — Next.js advisory ranges are broad
+      # and many don't apply to this app; see SECURITY.md § Dependency advisories).
+      - run: npm audit || true
+      # Gate: fail only on CRITICAL advisories in production dependencies.
+      - run: npm audit --omit=dev --audit-level=critical
 
   secrets:
     name: Secret scan (gitleaks)

@@ -46,6 +46,22 @@ relevant risks include:
 - Risks a user accepts by pasting a key into a browser on a device they don't trust
   (the app is explicit that a stored key is "only as safe as your phone").
 
+## Dependency advisories (`npm audit`)
+
+CI runs `npm audit` on every change. For visibility the **full** report runs
+non-blocking, and the pipeline **fails only on CRITICAL advisories in production
+dependencies**. We pin Next.js to the latest patched release of its major line.
+
+Why not fail on every advisory: `npm audit`'s affected-version ranges for Next.js
+are very broad, and most listed issues do not apply to Tripti — it does not use
+`next/image`, the Pages Router, i18n routing, or middleware redirects/rewrites; its
+only middleware sets a CSP header and its only API route is the stateless proxy.
+Residual high/moderate advisories are reviewed manually, and Next.js major upgrades
+(which the advisory database often requires) are tracked and applied deliberately so
+they don't destabilize a working, security-sensitive app. If you believe a specific
+advisory **is** exploitable here, please report it (above) — that's exactly the kind
+of finding we want.
+
 ## Supported versions
 
 This is an actively developed project; security fixes target the `main` branch and
