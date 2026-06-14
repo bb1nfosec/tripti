@@ -79,6 +79,16 @@ cuisines, translations, accessibility, and food photography.
 - **Sourcing map** — where to buy what, with monsoon-aware storage tips.
 - **EN / Hinglish / हिंदी** language toggle throughout.
 
+## 📸 Screenshots
+
+> _Screenshots coming soon — and this is a great first contribution!_ Run the app
+> (see below), capture a few screens (entry, today's idea, the provisioning plan),
+> and add them here. See [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md) and the
+> ["add screenshots" good first issue](https://github.com/bb1nfosec/tripti/labels/good%20first%20issue).
+
+<!-- Contributors: drop images in docs/screenshots/ and embed them here, e.g.
+     ![Today's idea](docs/screenshots/hero.png) -->
+
 ## 🚀 Quick start
 
 ```bash
@@ -259,6 +269,10 @@ Standards-based guides for contributors:
 
 > Note: `main` is protected — all changes land via pull request with green status
 > checks and a linear history; force-pushes and branch deletion are disabled.
+
+💬 **Questions, ideas, or just saying hi?** Use
+[GitHub Discussions](https://github.com/bb1nfosec/tripti/discussions) — beginners and
+students especially welcome. See [SUPPORT.md](SUPPORT.md) for where everything lives.
 
 ## 🙏 Credits
 
