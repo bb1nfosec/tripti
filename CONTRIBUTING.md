@@ -28,6 +28,18 @@ npm run lint       # next lint
 npm run build      # production build must succeed
 ```
 
+## Detailed guides
+
+Depending on what you're contributing, read the matching guide — they set the
+standards we review against:
+
+- 🎨 **[Design Guidelines](docs/DESIGN_GUIDELINES.md)** — palette, type, spacing,
+  components, motion, tone/microcopy, accessibility, and how to propose a design.
+- 🧑‍💻 **[Engineering Guidelines](docs/ENGINEERING_GUIDELINES.md)** — principles,
+  architecture rules, TypeScript/React standards, security must-dos, quality gates,
+  commits/PRs, and a Definition of Done.
+- 🏗️ **[Architecture](ARCHITECTURE.md)** · 🔐 **[Security self-assessment](docs/SECURITY_AUDIT.md)**
+
 ## Project conventions
 
 - **Read [ARCHITECTURE.md](ARCHITECTURE.md) first.** Keep the layering: UI →

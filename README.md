@@ -246,6 +246,15 @@ Contributions are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) and ou
 [Code of Conduct](CODE_OF_CONDUCT.md). Good first areas: real food photography,
 more regional cuisines, translations, accessibility, and on-device model support.
 
+Standards-based guides for contributors:
+
+- 🎨 [Design Guidelines](docs/DESIGN_GUIDELINES.md) — the visual system, motion, tone.
+- 🧑‍💻 [Engineering Guidelines](docs/ENGINEERING_GUIDELINES.md) — coding standards,
+  security must-dos, quality gates, Definition of Done.
+
+> Note: `main` is protected — all changes land via pull request with green status
+> checks and a linear history; force-pushes and branch deletion are disabled.
+
 ## 🙏 Credits
 
 Visual identity and screen designs were created with
