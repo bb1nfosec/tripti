@@ -1,5 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: 💬 Questions & help (Discussions)
+    url: https://github.com/bb1nfosec/tripti/discussions
+    about: New here or stuck? Ask in Discussions — students and beginners welcome.
+  - name: 🌱 First contribution guide
+    url: https://github.com/bb1nfosec/tripti/blob/main/docs/GETTING_STARTED.md
+    about: A gentle, step-by-step walkthrough for your first pull request.
   - name: 🔒 Report a security vulnerability
     url: https://github.com/bb1nfosec/tripti/security/advisories/new
     about: Please report vulnerabilities privately — do not open a public issue.
