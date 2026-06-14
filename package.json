@@ -3,6 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "description": "Tripti — a calm, local-first BYOLLM food companion for Indian households.",
+  "license": "MIT",
+  "homepage": "https://github.com/bb1nfosec/tripti#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bb1nfosec/tripti.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bb1nfosec/tripti/issues"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
