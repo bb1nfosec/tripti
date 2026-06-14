@@ -1,0 +1,104 @@
+:root {
+  --tripti-screen: #F6F0E6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--tripti-screen);
+  color: #322E28;
+  font-family: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* App lives in a single mobile column; center it on larger screens. */
+#tripti-root {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background: var(--tripti-screen);
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Larger, comfortable tap targets and no accidental zoom on inputs. */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #CFC5B2;
+  border-radius: 8px;
+}
+
+/* ---- Calm motion. Animate transform/opacity only (GPU-friendly). ---- */
+@keyframes triptiPulse {
+  0%, 100% { opacity: .5; }
+  50% { opacity: .95; }
+}
+@keyframes triptiSheen {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(220%); }
+}
+@keyframes triptiDot {
+  0%, 100% { opacity: .25; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+}
+@keyframes triptiSpin {
+  to { transform: rotate(360deg); }
+}
+@keyframes triptiRise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes triptiFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes triptiExpand {
+  from { opacity: 0; transform: translateY(-6px) scaleY(.98); }
+  to { opacity: 1; transform: translateY(0) scaleY(1); }
+}
+@keyframes triptiPop {
+  0% { transform: scale(1.16); }
+  55% { transform: scale(.99); }
+  100% { transform: scale(1); }
+}
+
+.tripti-rise { animation: triptiRise .22s ease-out both; }
+.tripti-fade { animation: triptiFade .2s ease-out both; }
+.tripti-expand { animation: triptiExpand .2s ease-out both; transform-origin: top; }
+.tripti-spin { animation: triptiSpin 1s linear infinite; }
+.tripti-pulse { animation: triptiPulse 1.6s ease-in-out infinite; }
+.tripti-pop { animation: triptiPop .26s ease; display: inline-block; }
+
+/* The satisfying tap micro-confirmation, used on chips/segments/feedback. */
+.tripti-tap:active { transform: scale(.97); }
+
+/* Honor the user's wish for stillness — no-motion fallback for everything. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tripti-tap:active { transform: none; }
+}

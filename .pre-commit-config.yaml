@@ -1,0 +1,9 @@
+# Optional local secret-scanning hook.
+#   pipx install pre-commit   (or: pip install pre-commit)
+#   pre-commit install
+# Then gitleaks runs automatically on every commit.
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.21.2
+    hooks:
+      - id: gitleaks
